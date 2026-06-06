@@ -22,5 +22,5 @@ jobs:
           script: |
             cd /home/ubuntu/chai-node-server
             git pull
-            npm install
-            pm2 restart 0
+            sh -c npm install
+            sh -c pm2 restart 0

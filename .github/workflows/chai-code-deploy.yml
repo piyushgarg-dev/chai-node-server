@@ -43,8 +43,8 @@ jobs:
             # Again pull the fresh image from hub
             sudo docker pull piyushgargdev/chaicode-node
 
-            # Run docker run -d -p 8000:8000 piyushgargdev/chaicode-node
-            sudo docker run -d --name chaicode-node --restart unless-stopped -p 8000:8000 piyushgargdev/chaicode-node
+            # Run docker run -d -p 80:8000 piyushgargdev/chaicode-node
+            sudo docker run -d --name chaicode-node --restart unless-stopped -p 80:8000 piyushgargdev/chaicode-node
 
             # Clean up old/unused images
             sudo docker image prune -f

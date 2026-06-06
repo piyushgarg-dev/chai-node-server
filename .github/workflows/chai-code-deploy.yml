@@ -20,7 +20,9 @@ jobs:
           username: ubuntu
           key: ${{ secrets.PRIVATE_KEY }}
           script: |
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             cd /home/ubuntu/chai-node-server
             git pull
-            sh -c npm install
-            sh -c pm2 restart 0
+            npm install
+            pm2 restart 0

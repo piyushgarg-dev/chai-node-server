@@ -8,6 +8,8 @@ services:
 
   caddy:
     image: caddy:latest
+    ports:
+      - '80:80'
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
     networks:

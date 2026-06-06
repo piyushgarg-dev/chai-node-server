@@ -1,4 +1,6 @@
-:80 {
+ex.piyushgarg.online {
+    tls piyush@piyushgarg.online
+
     handle {
         reverse_proxy nodejs-server:8000 {
             header_up Host {host}
